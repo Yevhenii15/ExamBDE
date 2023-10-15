@@ -5,6 +5,8 @@ function App() {
     // function to choose a random word from the list
     return words[Math.floor(Math.random() * words.length)]
   })
+  const [guessedLetters, setGuessedLetters] = useState<string[]>([]) // Array of guessed letters
+
   console.log(wordToGuess)
   return  <h1>Word Guesser</h1>
 }
