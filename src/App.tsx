@@ -11,7 +11,7 @@ function App() {
   const [wordToGuess, setWordToGuess] = useState(getWord ())
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]) // Array of guessed letters
 
-  const incorrectLetters = guessedLetters.filter( 
+  const incorrectLetters: string[]  = guessedLetters.filter( 
     letter => !wordToGuess.includes(letter)
   ) // Array of incorrect letters
 
