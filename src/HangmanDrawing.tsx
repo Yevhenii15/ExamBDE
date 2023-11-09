@@ -1,5 +1,6 @@
 const Head = (
-    <div 
+        <div 
+        id="head"
         style={{
             width: "50px",
             height: "50px",
@@ -11,7 +12,7 @@ const Head = (
         }}/>
 )
 const Body = (
-    <div 
+    <div id="body"
         style={{
             width: "10px",
             height: "100px",
