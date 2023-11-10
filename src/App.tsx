@@ -15,16 +15,19 @@ function App() {
     letter => !wordToGuess.includes(letter)
   ) // Array of incorrect letters
 
-  const isLoser = incorrectLetters.length >= 6 // If incorrect letters is greater than 6, you lose because I have 6 body parts
-  const isWinner = wordToGuess
+  const isLoser: boolean = incorrectLetters.length >= 6 // If incorrect letters is greater than 6, you lose because I have 6 body parts
+  const isWinner: boolean = wordToGuess
   .split("")
   .every(letter => guessedLetters.includes(letter)) // If all letters in the word are guessed, you win
+
+
   const addGuessedLetter = useCallback((letter: string) => {
     if(guessedLetters.includes(letter) || isLoser || isWinner ) return // If letter is already guessed, return
 
     setGuessedLetters(currentetters => [...currentetters, letter])
   },[guessedLetters, isLoser, isWinner])
 
+  
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const key = e.key

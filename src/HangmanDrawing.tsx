@@ -75,6 +75,7 @@ const Left_Leg = (
         }}/>
 )
 const Body_Parts = [ Head, Body, Right_Arm, Left_Arm, Right_Leg, Left_Leg ]
+
 type HangmanDrawingProps = {
     numberOfGuesses: number
 } 
