@@ -18,7 +18,7 @@ test("Check if style is reactive for keyboard", async (t) => {
       .expect(Selector("._active_1rn82_13").getStyleProperty("background-color")).eql("rgb(0, 170, 255)")
       .takeScreenshot()
       .wait(1000)
-    }
+    } 
     // Check if the button is inactive
     else if (await Selector("button#btn").hasClass("_inactive_1rn82_17")) {
       await t
